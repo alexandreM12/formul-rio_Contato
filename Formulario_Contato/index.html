@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./imag/document_icon_246433.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">  
+  </head>
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registrado com sucesso:', registration);
+                })
+                .catch((error) => {
+                    console.error('Falha ao registrar o Service Worker:', error);
+                });
+        });
+     }
+  </script>
+<body>
+
+    <div class="container">
+        <h1>Formulário de Contato</h1>
+        <form action="#" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <label for="contato">Como deseja ser contatado?</label>
+            <select id="contato" name="contato" required>
+                <option value="email">Email</option>
+                <option value="telefone">Telefone</option>
+                <option value="sms">SMS</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <h3>Links de redes sociais</h3>
+        <ul>
+            <li><a href="https://www.google.com/intl/pt-BR/gmail/about/"><i class="fas fa-envelope"></i>Email</a></li>
+            <li><a href="https://github.com/alexandreM12"><i class="fab fa-github"></i>GitHub</a></li>
+            <li><a href="https://pt-br.facebook.com"><i class="fab fa-facebook"></i>Facebook</a></li>
+        </ul>
+    </div>
+</body>
+</html>
